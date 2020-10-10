@@ -59,13 +59,18 @@
                 let password=document.querySelector('#password').value;
                 let verifyCode=document.querySelector('#verifyCode').value;
                 let is_remember=document.querySelector('#remember_me').checked;
-                let password_md5 = this.$md5(password);
+                let password_md5 = sso.transform2md5(password);
                 console.log("用户名：",login_name);
                 console.log("密  码：",password);
                 console.log("验证码：",verifyCode);
                 console.log("是否记住密码：",is_remember);
                 console.log("MD5加密后密码：",password_md5);
-                console.log("MD5加密后密码sso：",sso.sayHello(password));
+                let formData= new window.FormData();
+                formData.append("loginName",login_name);
+                formData.append("password",password_md5);
+                formData.append("loginName",login_name);
+
+                this.$router.push("/");
             }
         }
     }

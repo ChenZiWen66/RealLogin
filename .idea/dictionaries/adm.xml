@@ -2,6 +2,7 @@
   <dictionary name="adm">
     <words>
       <w>axios</w>
+      <w>kaptcha</w>
     </words>
   </dictionary>
 </component>

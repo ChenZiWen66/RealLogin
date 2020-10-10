@@ -1,7 +1,7 @@
 import md5 from 'js-md5'
-function sayHello(password){
+function transform2md5(password){
     return md5(password);
 }
 export default {
-    sayHello
+    transform2md5
 }
